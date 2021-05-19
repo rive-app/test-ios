@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "RiveRuntime"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "iOS SDK for Rive"
   spec.description  = "Rive iOS framework"
   spec.homepage     = "https://rive.app"
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target  = '11.3'
   spec.swift_version          = '5.0'
   spec.source       = { 
-    :git => "https://github.com/rive-app/ios-test.git",
+    :git => "https://github.com/rive-app/test-ios.git",
     :tag => "v#{spec.version}"
   }
   spec.ios.vendored_frameworks = 'RiveRuntime.xcframework'
