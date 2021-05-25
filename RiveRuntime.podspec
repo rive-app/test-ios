@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "RiveRuntime"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "iOS SDK for Rive"
   spec.description  = "Rive iOS framework"
   spec.homepage     = "https://rive.app"

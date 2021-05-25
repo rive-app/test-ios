@@ -11,13 +11,13 @@ public protocol LoopDelegate : AnyObject {
 public typealias PlaybackAction = ((Swift.String) -> Swift.Void)?
 public typealias InputsAction = (([RiveRuntime.StateMachineInput]) -> Swift.Void)?
 public protocol PlayDelegate : AnyObject {
-  func play(_ animationName: Swift.String)
+  func play(_ animationName: Swift.String, isStateMachine: Swift.Bool)
 }
 public protocol PauseDelegate : AnyObject {
-  func pause(_ animationName: Swift.String)
+  func pause(_ animationName: Swift.String, isStateMachine: Swift.Bool)
 }
 public protocol StopDelegate : AnyObject {
-  func stop(_ animationName: Swift.String)
+  func stop(_ animationName: Swift.String, isStateMachine: Swift.Bool)
 }
 public protocol InputsDelegate : AnyObject {
   func inputs(_ inputs: [RiveRuntime.StateMachineInput])
@@ -69,6 +69,7 @@ public enum Playback {
   open func advance(delta: Swift.Double)
   public func play(loop: RiveRuntime.Loop = .loopAuto, direction: RiveRuntime.Direction = .directionAuto)
   public func play(animationName: Swift.String, loop: RiveRuntime.Loop = .loopAuto, direction: RiveRuntime.Direction = .directionAuto, isStateMachine: Swift.Bool = false)
+  public func play(animationNames: [Swift.String], loop: RiveRuntime.Loop = .loopAuto, direction: RiveRuntime.Direction = .directionAuto, isStateMachine: Swift.Bool = false)
   public func pause()
   public func pause(animationName: Swift.String, isStateMachine: Swift.Bool = false)
   public func pause(animationNames: [Swift.String], isStateMachine: Swift.Bool = false)
