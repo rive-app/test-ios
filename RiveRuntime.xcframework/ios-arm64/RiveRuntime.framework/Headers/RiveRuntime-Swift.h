@@ -211,11 +211,21 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC11RiveRuntime8RiveView")
 @interface RiveView : UIView
+/// Minimalist constructor, call <code>.configure</code> to customize the <code>RiveView</code> later.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)drawRect:(CGRect)rect;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
+
+
+@interface RiveView (SWIFT_EXTENSION(RiveRuntime))
+/// Creates a Rive renderer and applies the currently animating artboard to it
+/// \param rect the <code>GCRect</code> that we will fit the artboard into.
+///
+- (void)drawRect:(CGRect)rect;
+@end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
