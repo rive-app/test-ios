@@ -71,6 +71,9 @@ public struct StateMachineInput : Swift.Hashable {
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
+extension RiveView : RiveRuntime.RiveFileDelegate {
+  @objc dynamic public func riveFileDidLoad(_ riveFile: RiveRuntime.RiveFile)
+}
 extension RiveView {
   open var fit: RiveRuntime.Fit {
     get
