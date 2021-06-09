@@ -23,7 +23,7 @@ public protocol InputsDelegate : AnyObject {
   func inputs(_ inputs: [RiveRuntime.StateMachineInput])
 }
 public protocol StateChangeDelegate : AnyObject {
-  func stateChange(_ stateName: Swift.String)
+  func stateChange(_ stateMachineName: Swift.String, _ stateName: Swift.String)
 }
 public enum Playback {
   case play
